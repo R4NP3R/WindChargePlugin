@@ -1,4 +1,5 @@
 # Wind Charge Plugin
+Plugin ultilizado para alterar as propriedades do windcharge, velocidade, força e particulas adicionais, plugin simples com comandos fáceis de lembrar
 
 ## Download
 

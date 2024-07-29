@@ -20,7 +20,7 @@ Caso deseje usar um script para facilitar na hora de enviar o plugin para pasta 
 task copyJar {
     copy {
         from 'build/libs/WindChargeControl-1.0.jar'
-        into 'C:\Users\{USER}\Desktop\server\plugins'
+        into 'C:/Users/{USER}/{local}/server/plugins'
     }
 }
 

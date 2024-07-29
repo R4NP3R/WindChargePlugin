@@ -14,7 +14,7 @@ Caso deseje baixar apenas o Plugin para uso [`WINDCHARGECONTROL`](https://github
 
 ## Scripts
 
-Caso deseje usar um script para facilitar na hora de enviar o plugin para pasta do seu servidor use o [`CopyJar`](https://github.com/R4NP3R/WindChargePlugin/blob/main/build.gradle)), lá no build.gradle apenas seleciona a pasta onde deseja enviar o mod, Exemplo:
+Caso deseje usar um script para facilitar na hora de enviar o plugin para pasta do seu servidor use o [`CopyJar`](https://github.com/R4NP3R/WindChargePlugin/blob/main/build.gradle), lá no build.gradle apenas seleciona a pasta onde deseja enviar o mod, Exemplo:
 
 ```sh
 task copyJar {

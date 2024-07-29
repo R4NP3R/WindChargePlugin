@@ -12,21 +12,28 @@ import java.util.HashMap;
 import java.util.UUID;
 
 public class WindChargeListener implements Listener {
+
+    //variavel da velocidade do windcharge
     private Double newVelocity = 1.0;
+
+    //variavel da força da explosão do windcharge
     private Float newExplosionPower = 1.0f;
+    //lista que guardas os players que tem particula
     private HashMap<UUID, Particle> playersParticle = new HashMap<>();
 
     @EventHandler
     public void setWindChargeSpeed(ProjectileLaunchEvent event) {
+        // alteração velocidade do windcharge será apenas para player
         if(event.getEntity().getShooter() instanceof Player) {
             if(event.getEntity() instanceof WindCharge ){
                 WindCharge windcharge = (WindCharge) event.getEntity();
 
+                // velocidade atual do windcharge
                 Vector velocity = windcharge.getVelocity();
-                velocity.normalize();
+                // multiplicando pela velocidade estipulada pelo player
                 velocity.multiply(newVelocity);
+                // alterando a aceleração para animação do Windcharge ficar mais fluida
                 windcharge.setAcceleration(velocity);
-
             }
         }
     }
@@ -39,12 +46,16 @@ public class WindChargeListener implements Listener {
             if(event.getEntity() instanceof WindCharge) {
                 WindCharge windcharge = (WindCharge) event.getEntity();
 
-                        windcharge.setIsIncendiary(true);
+                // como não consegui alterar a força da explosão, decidi fazer o player ficar mais "fraco", então toda vez que um player atirar o
+                // WindCharge apenas player irão sentir que a força mudou, para deixar o player mais "fraco", quando atigindo pela WindCharge
+                // a velocidade do player será multiplicada pelo oque foi estipulado na variavel newExplosionPower
+
                         Vector velocity = player.getVelocity();
                         velocity.multiply(newExplosionPower);
                         player.setVelocity(velocity);
                         Particle newParticle = playersParticle.get(player.getUniqueId());
 
+                        // caso o player tenha uma particula ela será spawnada
                         if (newParticle != null) {
                             world.spawnParticle(newParticle, windcharge.getLocation(), 150, 1, 1, 1);
                         }

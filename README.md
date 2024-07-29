@@ -7,13 +7,13 @@ Caso deseje baixar apenas o Plugin para uso [`WINDCHARGECONTROL`](https://github
 ## Comandos
 
 * /windcharge help - retorna todos os comandos do Plugin
-* /windcharge velocity/speed "speed" - alterar a velocidade do windcharge
-* /windcharge power "strength" - alterar a força do windcharge
+* /windcharge velocity/speed <"speed"> - alterar a velocidade do windcharge
+* /windcharge power <"strength"> - alterar a força do windcharge
 * /windcharge velocity/speed - retorna o valor atual de velocidade do windcharge
 * /windcharge power - retorna o valor atual de velocidade do windcharge
 * /windcharge particles list - lista as particulas disponiveis para uso
 * /windcharge particles off - desativa as particulas do comando
-* /windcharge particles <<"particle">> - para selecionar a particula desejada
+* /windcharge particles <"particle"> - para selecionar a particula desejada
 
 
 

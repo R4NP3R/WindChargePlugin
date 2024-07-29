@@ -51,6 +51,6 @@ processResources {
 task copyJar {
     copy {
         from 'build/libs/WindChargeControl-1.0.jar'
-        into 'Pasta onde deseja deixar o plugin'
+        into 'C:/Users/{USER}/{local}/server/plugins'
     }
 }
